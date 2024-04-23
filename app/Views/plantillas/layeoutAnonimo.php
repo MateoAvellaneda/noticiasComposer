@@ -28,8 +28,8 @@
     </div>
     <div class="top-bar-right">
         <ul class="menu">
-        <li><a class="button success" href="http://localhost/proyectoNoticiasCi/public/iniciarsesion" style="margin-right:3px ;">Iniciar sesion</a></li>
-        <li><a class="button success" href="http://localhost/proyectoNoticiasCi/public/registrarse">Registrarse</a></li>
+        <li><a class="button success" href="http://localhost/noticiasComposer/public/iniciarsesion" style="margin-right:3px ;">Iniciar sesion</a></li>
+        <li><a class="button success" href="http://localhost/noticiasComposer/public/registrarse">Registrarse</a></li>
         </ul>
     </div>
     </div>

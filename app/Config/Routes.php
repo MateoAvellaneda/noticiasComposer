@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/iniciarsesion', 'anonimo\IniciarSesion::index');
 $routes->get('/registrarse', 'anonimo\Registrarse::index');
+$routes->post('/iniciarsesion/iniciarsesion', 'anonimo\IniciarSesion::iniciarSesion');
