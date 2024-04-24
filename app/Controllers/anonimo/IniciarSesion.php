@@ -2,7 +2,7 @@
 
 namespace App\Controllers\anonimo;
 use App\Controllers\BaseController;
-
+use App\Models\UsuariosModel;
 class IniciarSesion extends BaseController
 {
     protected $helpers = ['form'];
@@ -40,7 +40,9 @@ class IniciarSesion extends BaseController
     }
 
     public function checkUser($data){
-        print_r($data);
+        $UsuarioModel = new UsuariosModel();
+        $where = ['nickname' => $data['nickname'], 'pass' => $data['pass']];
+        print_r($UsuarioModel->where($where)->first());
     }
 }
 

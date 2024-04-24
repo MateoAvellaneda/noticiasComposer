@@ -19,7 +19,7 @@
                 </div>
                 <div class="grid-x grid-padding-x">
                     <div class="small-12 cell">
-                        <p class="text-center"><?php echo validation_show_error('nickname');?></p>
+                        <p class="text-center error"><?php echo validation_show_error('nickname');?></p>
                     </div>
                 </div>
                 <div class="grid-x grid-padding-x">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="grid-x grid-padding-x">
                     <div class="small-12 cell">
-                        <p class="text-center"><?php echo validation_show_error('pass');?></p>
+                        <p class="text-center error"><?php echo validation_show_error('pass');?></p>
                     </div>
                 </div>
                 <div class="grid-x grid-padding-x">
