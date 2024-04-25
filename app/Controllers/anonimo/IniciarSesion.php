@@ -15,6 +15,7 @@ class IniciarSesion extends BaseController
     }
 
     public function iniciarSesion(){
+
         $reglas = [
             'nickname' => [
                 'rules' => 'required|min_length[5]|max_length[20]',
@@ -31,19 +32,25 @@ class IniciarSesion extends BaseController
                 ]
             ]
         ];
-        $data = $this->request->getPost();
-        if (! $this->validateData($data, $reglas)){
+        if (!$this->validate($reglas)){ 
             return view('anonimo/iniciarSesionView');
         }else{
-            $this->checkUser($data);
+            $data = $this->request->getPost();
+            return $this->checkSesion($data);
         }
     }
 
-    public function checkUser($data){
-        $UsuarioModel = new UsuariosModel();
-        $where = ['nickname' => $data['nickname'], 'pass' => $data['pass']];
-        print_r($UsuarioModel->where($where)->first());
+    private function checkSesion($data){
+        $usuariosModel = new UsuariosModel();
+        $respuesta = $usuariosModel->checkUser($data['nickname'], $data['pass']);
+        if(empty($respuesta)){
+            return view('anonimo/iniciarSesionView', ['error' => 'nombre de usuario o contrasenia incorrecta.']);
+        }else{
+
+        }
     }
+
+    
 }
 
 ?>

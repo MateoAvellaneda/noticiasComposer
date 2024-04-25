@@ -19,5 +19,10 @@ class UsuariosModel extends Model{
     // Dates
     protected $useTimestamps = false;
 
+
+    public function checkUser($nickname, $passw){
+        $resultado = $this->where(['nickname' => $nickname, 'passw' => $passw])->find();
+        return (!empty($resultado));
+    }
 }
 ?>

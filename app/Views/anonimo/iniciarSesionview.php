@@ -7,13 +7,13 @@
         <div class="cell small-2"></div>
         <div class="cell small-8 celdaFormulario">
             <h1>Iniciar Sesion</h1>
-            <form action="http://localhost/noticiasComposer/public/iniciarsesion/iniciarsesion" method="post">
+            <form action="<?php echo base_url('/iniciarsesion/iniciarsesion')?>" method="post">
                 <div class="grid-x grid-padding-x">
                     <div class="small-3 cell">
                         <label for="nickname" class="text-right">Nombre de usuario:</label>
                     </div>
                     <div class="small-6 cell">
-                        <input type="text" id="nickname" name="nickname" placeholder="Fulanito123" value="<?php echo set_value('nickname');?>">
+                    <input type="text" id="nickname" name="nickname" placeholder="Fulanito123" value="<?php echo set_value("nickname"); ?>">
                     </div>
                     
                 </div>
@@ -33,6 +33,7 @@
                 <div class="grid-x grid-padding-x">
                     <div class="small-12 cell">
                         <p class="text-center error"><?php echo validation_show_error('pass');?></p>
+                        <p class="text-center error"><?php if(isset($error)){echo $error;};?></p>
                     </div>
                 </div>
                 <div class="grid-x grid-padding-x">
@@ -47,7 +48,7 @@
             <div class="grid-x">
                 <div class="cell small-3"></div>
                 <div class="cell small-6" style="text-align: center;">
-                    <a href="" >No tienes una cuenta? Registrate aqui!</a>
+                    <a href="<?php echo base_url('/registrarse')?>" >No tienes una cuenta? Registrate aqui!</a>
                 </div>
                 <div class="cell small-3"></div>
             </div>
