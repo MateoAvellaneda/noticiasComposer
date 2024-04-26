@@ -1,0 +1,13 @@
+.formContainer{
+    margin-top: 60px;
+}
+
+.formContainer .celdaFormulario{
+    padding-top: 15px;
+    border: 1px solid lightgray;
+}
+
+.celdaFormulario h1{
+    text-align: center;
+    font-size: 2rem;
+}
