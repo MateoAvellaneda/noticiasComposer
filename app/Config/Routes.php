@@ -11,3 +11,4 @@ $routes->get('/registrarse', 'anonimo\Registrarse::index');
 $routes->post('/iniciarsesion/iniciarsesion', 'anonimo\IniciarSesion::iniciarSesion');
 $routes->post('/registrarse/registrarusuario', 'anonimo\Registrarse::registrarUsuario');
 $routes->get('/crearnoticia', 'editor\CrearNoticia::index');
+$routes->post('/crearnoticia/guardar', 'editor\CrearNoticia::guardar');

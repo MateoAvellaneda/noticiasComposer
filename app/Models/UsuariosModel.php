@@ -21,8 +21,8 @@ class UsuariosModel extends Model{
 
 
     public function checkUser($nickname, $passw){
-        $resultado = $this->where(['nickname' => $nickname, 'passw' => $passw])->find();
-        return (!empty($resultado));
+        $resultado = $this->where(['nickname' => $nickname, 'passw' => $passw])->first();
+        return $resultado;
     }
 }
 ?>
