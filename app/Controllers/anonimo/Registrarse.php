@@ -68,9 +68,23 @@ class Registrarse extends BaseController
                 ]
             ]
         ];
-
         if (!$this->validate($reglas)){ 
             return view('anonimo/registrarseView');
+        }else{
+            $usuariosModel = new UsuariosModel();
+            $formInput = $this->request->getPost();
+            $data = [
+                'nickname' => $formInput['nickname'],
+                'passw' => $formInput['pass'],
+                'email' => $formInput['email'],
+                'fullname' => ($formInput['nombre'] . ' ' . $formInput['apellido']),
+                'rol' => $formInput['rol']
+            ];
+            if($usuariosModel->createUser($data)){
+                echo '<h1>Exitooooo</h1>';
+            }else{
+                echo '<h1>Muy maaaaal</h1>';
+            }
         }
     }
 }

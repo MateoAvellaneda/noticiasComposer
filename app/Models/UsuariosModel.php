@@ -7,7 +7,7 @@ class UsuariosModel extends Model{
     protected $table      = 'usuarios';
     protected $primaryKey = 'ID';
 
-    protected $useAutoIncrement = false;
+    protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
@@ -23,6 +23,10 @@ class UsuariosModel extends Model{
     public function checkUser($nickname, $passw){
         $resultado = $this->where(['nickname' => $nickname, 'passw' => $passw])->first();
         return $resultado;
+    }
+
+    public function createUser($data){
+        return $this->insert($data, false);
     }
 }
 ?>

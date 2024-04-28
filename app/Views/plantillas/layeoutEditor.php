@@ -15,16 +15,20 @@
         <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text">Site Title</li>
         <li>
-            <a href="#">Inicio</a>
+            <a href="#">One</a>
+            <ul class="menu vertical">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Crear noticia</a></li>
+            <li><a href="#">Three</a></li>
+            </ul>
         </li>
-        <li><a href="#">two</a></li>
+        <li><a href="#">Two</a></li>
         <li><a href="#">Three</a></li>
         </ul>
     </div>
     <div class="top-bar-right">
         <ul class="menu">
-        <li><a class="button success" href="http://localhost/noticiasComposer/public/iniciarsesion" style="margin-right:3px ;">Iniciar sesion</a></li>
-        <li><a class="button success" href="http://localhost/noticiasComposer/public/registrarse">Registrarse</a></li>
+        <li><a class="button alert" href="http://localhost/noticiasComposer/public/cerrarsesion">Cerrar sesion</a></li>
         </ul>
     </div>
     </div>
