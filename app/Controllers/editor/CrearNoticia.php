@@ -13,8 +13,10 @@ class CrearNoticia extends BaseController{
 
         $formInput = $this->request->getPost();
         //print_r($formInput);
-        print_r($this->validarCampos($formInput));
-        exit;
+        if($this->validarCampos($formInput)){
+            $nombreImagen = $this->saveImage();
+            
+        }
         // if(!$this->validarCampos($formInput)){
 
         // }
@@ -31,7 +33,7 @@ class CrearNoticia extends BaseController{
                 ]
             ],
             'imagen' => [
-                'rules' => 'max_size[imagen,5000]|is_image[image]',
+                'rules' => 'max_size[imagen,5000]|is_image[imagen]',
                 'errors' => [
                     'max_size' => "La imagen supera el minimo de peso (5mb)",
                     'is_image' => "El archivo subido no es una imagen valida",
@@ -53,10 +55,21 @@ class CrearNoticia extends BaseController{
             ]
         ];
         if(!$this->validateData($formInput,$reglas)){
-            return 'hola';
+            return true;
         }else{
-            return 'chau';
+            return false;
         }
+    }
+
+    private function saveImage(){
+        $imagen = $this->request->getFile('imagen');
+        if(!empty($image)){
+            if($imagen->isValid() && !$imagen->hasMoved()){
+                $imagen->move('./uploads/imagenesNoticias', $imagen->getRandomName());
+                return $imagen->getFilename();
+            }
+        }
+        return '';
     }
 }
 
