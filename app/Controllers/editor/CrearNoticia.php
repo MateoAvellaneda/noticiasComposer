@@ -1,7 +1,8 @@
 <?php
 namespace App\Controllers\editor;
 use App\Controllers\BaseController;
-
+use App\Models\NoticiasModel;
+use CodeIgniter\I18n\Time;
 class CrearNoticia extends BaseController{
     protected $helpers = ['form'];
 
@@ -12,9 +13,10 @@ class CrearNoticia extends BaseController{
     public function guardar(){
 
         $formInput = $this->request->getPost();
-        //print_r($formInput);
+        print_r($formInput);
         if($this->validarCampos($formInput)){
             $nombreImagen = $this->saveImage();
+            $this->crearNoticia($formInput, $nombreImagen);
             
         }
         // if(!$this->validarCampos($formInput)){
@@ -47,7 +49,7 @@ class CrearNoticia extends BaseController{
                 ]
             ],
             'categoria' => [
-                'rules' => 'required|is_not_unique[categorias.nombre]',
+                'rules' => 'required|is_not_unique[categorias.ID]',
                 'errors' => [
                     'required' => "La categoria es obligatoria",
                     'is_not_unique' => "La categoria no es valida"
@@ -70,6 +72,33 @@ class CrearNoticia extends BaseController{
             }
         }
         return '';
+    }
+
+    private function crearNoticia($input, $nombreImagen){
+        $data = ['IDusuario' => $this->session->get('id'),
+                 'titulo' => $input['titulo'],
+                 'descripcion' => $input['descripcion'],
+                 'IDcategoria' => $input['categoria']
+                ];
+
+        if(isset($input['borrador'])){
+            $data['estado'] = 'borrador';
+        }elseif(isset($input['validar'])){
+            $data['estado'] = 'validar';
+        }
+
+        if(!empty($nombreImagen)){
+            $data['urlImagen'] = '/uploads/imagenesNoticias/' . $nombreImagen;
+        }
+
+        if(isset($input['activado'])){
+            $data['activo'] = 1;
+        }else{
+            $data['activo'] = 0;
+        }
+        $fechaFin = Time::now('America/Argentina/Buenos_Aires', 'en_US');
+        $fechaFin = $fechaFin->addMonths(1);
+        $data['fechaFin'] = $fechaFin->toDateTimeString();
     }
 }
 
