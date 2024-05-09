@@ -13,3 +13,4 @@ $routes->post('/registrarse/registrarusuario', 'anonimo\Registrarse::registrarUs
 $routes->get('/crearnoticia', 'editor\CrearNoticia::index');
 $routes->post('/crearnoticia/guardar', 'editor\CrearNoticia::guardar');
 $routes->get('/cerrarsesion', 'CerrarSesion::cerrarSesion');
+$routes->get('/misnoticias', 'editor\MisNoticias::index');

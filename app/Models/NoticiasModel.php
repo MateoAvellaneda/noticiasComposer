@@ -12,7 +12,7 @@ class NoticiasModel extends Model{
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['IDusuario', 'titulo', 'descripcion', 'estado', 'IDcategoria', 'urlImagen', 'activo', 'fechaFin'];
+    protected $allowedFields = ['IDusuario', 'titulo', 'descripcion', 'estado', 'IDcategoria', 'urlImagen', 'activo', 'fechaFin', 'fecha'];
 
     protected bool $allowEmptyInserts = false;
 
@@ -22,7 +22,7 @@ class NoticiasModel extends Model{
 
 
     public function createNoticia($data){
-        return $this->insert($data, false);
+        return $this->insert($data);
     }
 }
 ?>

@@ -2,22 +2,41 @@
 namespace App\Controllers\editor;
 use App\Controllers\BaseController;
 use App\Models\NoticiasModel;
+use App\Models\HistorialModel;
 use CodeIgniter\I18n\Time;
 class CrearNoticia extends BaseController{
     protected $helpers = ['form'];
+    private $noticiasModel;
+    private $historialModel;
+
+    public function __construct(){
+        $this->noticiasModel = new NoticiasModel();
+        $this->historialModel = new HistorialModel();
+    }
+
+    private function checkSession(){
+        $id = $this->session->get('id');
+        if(is_null($id)){
+            return $this->response->redirect(site_url());
+        }elseif($this->session->get('rol') == 2){
+            return $this->response->redirect(site_url());
+        }
+    }
 
     public function index(){
+        $this->checkSession();
         return view('/editor/CrearNoticia');
     }
 
     public function guardar(){
-
+        $this->checkSession();
         $formInput = $this->request->getPost();
-        print_r($formInput);
         if($this->validarCampos($formInput)){
             $nombreImagen = $this->saveImage();
             $this->crearNoticia($formInput, $nombreImagen);
-            
+            echo "holavarria";
+        }else{
+            return view('editor/CrearNoticia');
         }
         // if(!$this->validarCampos($formInput)){
 
@@ -56,7 +75,7 @@ class CrearNoticia extends BaseController{
                 ]
             ]
         ];
-        if(!$this->validateData($formInput,$reglas)){
+        if($this->validateData($formInput,$reglas)){
             return true;
         }else{
             return false;
@@ -65,10 +84,10 @@ class CrearNoticia extends BaseController{
 
     private function saveImage(){
         $imagen = $this->request->getFile('imagen');
-        if(!empty($image)){
+        if(!empty($imagen)){
             if($imagen->isValid() && !$imagen->hasMoved()){
                 $imagen->move('./uploads/imagenesNoticias', $imagen->getRandomName());
-                return $imagen->getFilename();
+                return $imagen->getName();
             }
         }
         return '';
@@ -96,9 +115,21 @@ class CrearNoticia extends BaseController{
         }else{
             $data['activo'] = 0;
         }
-        $fechaFin = Time::now('America/Argentina/Buenos_Aires', 'en_US');
-        $fechaFin = $fechaFin->addMonths(1);
+        $fechaActual = Time::now('America/Argentina/Buenos_Aires', 'en_US');
+        $data['fecha'] = $fechaActual->toDateString();
+        $fechaFin = $fechaActual->addMonths(1);
         $data['fechaFin'] = $fechaFin->toDateTimeString();
+
+        $idNoticia = $this->noticiasModel->createNoticia($data);
+
+        $this->insertHistorial($data, $idNoticia);
+    }
+
+    private function insertHistorial($data, $idNoticia){
+        $data['IDuser'] = $data['IDusuario'];
+        unset($data['IDusuario']);
+        $data['IDnoticia'] = $idNoticia;
+        $this->historialModel->createHistorial($data);
     }
 }
 

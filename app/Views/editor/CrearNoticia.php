@@ -1,4 +1,4 @@
-<?php echo $this->extend('plantillas/layeoutAnonimo');?>
+<?php echo $this->extend('plantillas/layeoutEditor');?>
 <?php echo $this->section('linkCss');?>
 <link rel="stylesheet" href="<?php echo base_url('styles/crearNoticia.css');?>">
 <?php echo $this->endSection();?>
@@ -11,11 +11,11 @@
       <div class="grid-x grid-padding-x">
         <div class="small-7 medium-5 cell">
           <label for="titulo" class="">Titulo de noticia:
-            <input type="text" id="titulo" name="titulo">
+            <input type="text" id="titulo" name="titulo" value="<?php echo set_value("titulo"); ?>">
           </label>
         </div>
         <div class="small-5 cell">
-          <p class="error">asdasdsadsa</p>
+          <p class="error"><?php echo validation_show_error('titulo');?></p>
         </div>
       </div>
       <div class="grid-x grid-padding-x">
@@ -25,17 +25,17 @@
           </label>
         </div>
         <div class="small-5 cell">
-          <p class="error">asdasdsadsa</p>
+          <p class="error"><?php echo validation_show_error('imagen');?></p>
         </div>
       </div>
       <div class="grid-x grid-padding-x">
         <div class="small-7 medium-6 cell">
           <label for="descripcion" class="">Descripcion de noticia:
-            <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" value="<?php echo set_value("descripcion"); ?>"></textarea>
           </label>
         </div>
         <div class="small-5 cell">
-          <p class="error">asdasdsadsa</p>
+          <p class="error"><?php echo validation_show_error('descripcion');?></p>
         </div>
       </div>
       <div class="grid-x grid-padding-x">
@@ -48,7 +48,7 @@
             </select>
         </div>
         <div class="small-5 cell">
-          <p class="error">asdasdsadsa</p>
+          <p class="error"><?php echo validation_show_error('categoria');?></p>
         </div>
       </div>
       <div class="grid-x grid-padding-x">

@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias</title>
-    <link rel="stylesheet" href="<?php echo base_url('assets/foundation/foundation.css');?>">
+    <link rel="stylesheet" href="<?php
+
+use App\Controllers\editor\CrearNoticia;
+
+ echo base_url('assets/foundation/foundation.css');?>">
     <?php 
         echo $this->renderSection("linkCss");
     ?>
@@ -15,14 +19,9 @@
         <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text">Site Title</li>
         <li>
-            <a href="#">One</a>
-            <ul class="menu vertical">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Crear noticia</a></li>
-            <li><a href="#">Three</a></li>
-            </ul>
+            <a href="<?php echo base_url('crearnoticia')?>">Crear Noticia</a>
         </li>
-        <li><a href="#">Two</a></li>
+        <li><a href="<?php echo base_url('misnoticias')?>">Mis Noticias</a></li>
         <li><a href="#">Three</a></li>
         </ul>
     </div>
