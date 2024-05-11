@@ -29,8 +29,21 @@
                     </tr>
                 </thead>
                 <tbody>
-
-
+                  <?php 
+                  $stringNoticias = ['borrador', 'validar', 'descartadas', 'rechazadas', 'finalizadas'];
+                  foreach ($stringNoticias as $value) {
+                    foreach ($$value as $noticia) {
+                      echo "<tr>";
+                      echo "<td>" . $noticia['titulo'] . "</td>";
+                      echo "<td>" . $noticia['estado'] . "</td>";
+                      echo "<td> 
+                        <a href='#' class='button'>Ver Noticia</a> 
+                        <a href='#' class='button secondary'>Historial</a> 
+                      </td>"; 
+                      echo "</tr>";    
+                    }
+                  } 
+                  ?>
                 </tbody>
             </table>
         </div>
@@ -43,7 +56,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    <?php
+                    foreach ($borrador as $noticia) {
+                      echo "<tr>";
+                      echo "<td>" . $noticia['titulo'] . "</td>";
+                      echo "<td>
+                          <a href='#' class='button'>Ver Noticia</a> 
+                          <a href="."'".base_url('editarnoticia/'.$noticia['ID']) ."'" . "class='button success'>Editar</a>
+                          <a href='#' class='button alert'>Descartar</a> 
+                          <a href='#' class='button secondary'>Historial</a> 
+                      </td>";
+                    }
+                      
+                    ?>
                     
                 </tbody>
             </table>

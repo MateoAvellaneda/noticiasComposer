@@ -30,9 +30,67 @@
                 'finalizadas' => []
             ];
 
+            $noticias['borrador'] = $this->getBorradores();
+            $noticias['validar'] = $this->getValidar();
+            $noticias['descartadas'] = $this->getDescartadas();
+            $noticias['rechazadas'] = $this->getRechazadas();
+            $noticias['finalizadas'] = $this->getFinalizadas();
 
             return view('editor/misNoticiasView', $noticias);
         }
+
+        private function getBorradores(){
+            $idUsuario = $this->session->get('id');
+            $db = \config\Database::connect();
+            $builder = $db->table('noticias');
+            $builder->select('*');
+            $builder->where('IDusuario', $idUsuario);
+            $builder->where('estado', 'borrador');
+            $query = $builder->get();
+            return $query->getResultArray();
+        }
+
+        private function getValidar(){
+            $idUsuario = $this->session->get('id');
+            $db = \config\Database::connect();
+            $builder = $db->table('noticias');
+            $builder->select('*');
+            $builder->where('IDusuario', $idUsuario);
+            $builder->where('estado', 'validar');
+            $query = $builder->get();
+            return $query->getResultArray();
+        }
+        private function getDescartadas(){
+            $idUsuario = $this->session->get('id');
+            $db = \config\Database::connect();
+            $builder = $db->table('noticias');
+            $builder->select('*');
+            $builder->where('IDusuario', $idUsuario);
+            $builder->where('estado', 'descartada');
+            $query = $builder->get();
+            return $query->getResultArray();
+        }
+        private function getRechazadas(){
+            $idUsuario = $this->session->get('id');
+            $db = \config\Database::connect();
+            $builder = $db->table('noticias');
+            $builder->select('*');
+            $builder->where('IDusuario', $idUsuario);
+            $builder->where('estado', 'rechazada');
+            $query = $builder->get();
+            return $query->getResultArray();
+        }
+        private function getFinalizadas(){
+            $idUsuario = $this->session->get('id');
+            $db = \config\Database::connect();
+            $builder = $db->table('noticias');
+            $builder->select('*');
+            $builder->where('IDusuario', $idUsuario);
+            $builder->where('estado', 'finalizada');
+            $query = $builder->get();
+            return $query->getResultArray();
+        }
+        
 
     }
 ?>

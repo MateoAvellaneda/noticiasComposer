@@ -3,8 +3,8 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class NoticiasModel extends Model{
-    protected $table      = 'noticias';
+class CategoriasModel extends Model{
+    protected $table      = 'categorias';
     protected $primaryKey = 'ID';
 
     protected $useAutoIncrement = true;
@@ -12,18 +12,13 @@ class NoticiasModel extends Model{
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['IDusuario', 'titulo', 'descripcion', 'estado', 'IDcategoria', 'urlImagen', 'activo', 'fechaFin', 'fecha'];
+    protected $allowedFields = ['ID', 'nombre', 'descripcion'];
 
     protected bool $allowEmptyInserts = false;
 
     // Dates
     protected $useTimestamps = false;
 
-
-
-    public function createNoticia($data){
-        return $this->insert($data);
-    }
-
 }
+
 ?>

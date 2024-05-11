@@ -14,3 +14,4 @@ $routes->get('/crearnoticia', 'editor\CrearNoticia::index');
 $routes->post('/crearnoticia/guardar', 'editor\CrearNoticia::guardar');
 $routes->get('/cerrarsesion', 'CerrarSesion::cerrarSesion');
 $routes->get('/misnoticias', 'editor\MisNoticias::index');
+$routes->get('/editarnoticia/(:num)', 'editor\EditarNoticia::index/$1');
