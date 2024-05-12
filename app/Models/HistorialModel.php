@@ -20,10 +20,9 @@ class HistorialModel extends Model{
     // Dates
     protected $useTimestamps = false;
 
-
-
     public function createHistorial($data){
         return $this->insert($data, false);
     }
+
 }
 ?>

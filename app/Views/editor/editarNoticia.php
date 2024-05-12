@@ -9,7 +9,7 @@
   <div class="cell small-1"></div>
   <div class="cell small-10 celdaFormulario">
     <h1>Editar Noticia</h1>
-    <form action="<?php echo base_url('/crearnoticia/guardar')?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo base_url('/editarnoticia/editar/' .  $valuesNoticia['ID'])?>" method="post" enctype="multipart/form-data">
       <div class="grid-x grid-padding-x">
         <div class="small-7 medium-5 cell">
           <label for="titulo" class="">Titulo de noticia:
@@ -44,7 +44,7 @@
       <div class="grid-x grid-padding-x">
         <div class="small-7 medium-5 cell">
             <label for="categoria" class="">Categoria:</label>
-            <select name="categoria">
+            <select name="IDcategoria">
                 <?php
                     foreach ($categorias as $categoria) {
                         if($categoria['ID'] == $valuesNoticia['IDcategoria']){
@@ -62,6 +62,13 @@
         <div class="small-5 cell">
           <p class="error"><?php echo validation_show_error('categoria');?></p>
         </div>
+      </div>
+      <div class="errorContainer">
+        <?php
+          if(isset($error)){
+            echo "<p class='error'>". $error ."</p>";
+          }
+        ?>
       </div>
       <div class="grid-x grid-padding-x">
         <div class="small-4 cell"></div>

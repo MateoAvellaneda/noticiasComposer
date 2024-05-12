@@ -63,7 +63,12 @@
                       echo "<td>
                           <a href='#' class='button'>Ver Noticia</a> 
                           <a href="."'".base_url('editarnoticia/'.$noticia['ID']) ."'" . "class='button success'>Editar</a>
-                          <a href='#' class='button alert'>Descartar</a> 
+                          ";
+                          if($noticia['retroceder'] == 1){
+                            echo "<a href="."'" . base_url('deshacer/'.$noticia['ID']) ."'" . "class='button warning'>Deshacer ultimo cambio</a>
+                            ";
+                          }
+                      echo "<a href='#' class='button alert'>Descartar</a> 
                           <a href='#' class='button secondary'>Historial</a> 
                       </td>";
                     }
