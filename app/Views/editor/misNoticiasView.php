@@ -1,8 +1,8 @@
-<?php echo $this->extend('plantillas/layeoutEditor');?>
-<?php echo $this->section('linkCss');?>
-<link rel="stylesheet" href="<?php echo base_url('styles/misNoticias.css');?>">
-<?php echo $this->endSection();?>
-<?php echo $this->section('contenido');?>
+<?php echo $this->extend('plantillas/layeoutEditor'); ?>
+<?php echo $this->section('linkCss'); ?>
+<link rel="stylesheet" href="<?php echo base_url('styles/misNoticias.css'); ?>">
+<?php echo $this->endSection(); ?>
+<?php echo $this->section('contenido'); ?>
 
 <div class="grid-container contenedorTabs">
   <div class="grid-x">
@@ -19,72 +19,122 @@
     <div class="cell medium-9">
       <div class="tabs-content vertical" data-tabs-content="example-tabs">
         <div class="tabs-panel is-active" id="panel1v">
-            <table class="hover">
-                <thead>
-                    <tr>
-                    <th width="230">Titulo</th>
-                    <th width="120">Estado</th>
-                    <th>Opciones</th>
+          <table class="hover">
+            <thead>
+              <tr>
+                <th width="230">Titulo</th>
+                <th width="120">Estado</th>
+                <th>Opciones</th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                  <?php 
-                  $stringNoticias = ['borrador', 'validar', 'descartadas', 'rechazadas', 'finalizadas'];
-                  foreach ($stringNoticias as $value) {
-                    foreach ($$value as $noticia) {
-                      echo "<tr>";
-                      echo "<td>" . $noticia['titulo'] . "</td>";
-                      echo "<td>" . $noticia['estado'] . "</td>";
-                      echo "<td> 
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              $stringNoticias = ['borrador', 'validar', 'descartadas', 'rechazadas', 'finalizadas'];
+              foreach ($stringNoticias as $value) {
+                foreach ($$value as $noticia) {
+                  echo "<tr>";
+                  echo "<td>" . $noticia['titulo'] . "</td>";
+                  echo "<td>" . $noticia['estado'] . "</td>";
+                  echo "<td> 
                         <a href='#' class='button'>Ver Noticia</a> 
                         <a href='#' class='button secondary'>Historial</a> 
-                      </td>"; 
-                      echo "</tr>";    
-                    }
-                  } 
-                  ?>
-                </tbody>
-            </table>
+                      </td>";
+                  echo "</tr>";
+                }
+              }
+              ?>
+            </tbody>
+          </table>
         </div>
         <div class="tabs-panel" id="panel2v">
-            <table class="hover">
-                <thead>
-                    <tr>
-                    <th width="250">Titulo</th>
-                    <th>Opciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    foreach ($borrador as $noticia) {
-                      echo "<tr>";
-                      echo "<td>" . $noticia['titulo'] . "</td>";
-                      echo "<td>
+          <table class="hover">
+            <thead>
+              <tr>
+                <th width="250">Titulo</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              foreach ($borrador as $noticia) {
+                echo "<tr>";
+                echo "<td>" . $noticia['titulo'] . "</td>";
+                echo "<td>
                           <a href='#' class='button'>Ver Noticia</a> 
-                          <a href="."'".base_url('editarnoticia/'.$noticia['ID']) ."'" . "class='button success'>Editar</a>
+                          <a href=" . "'" . base_url('enviarValidar/' . $noticia['ID']) . "'" . "class='button success'>Enviar a validar</a>
                           ";
-                          if($noticia['retroceder'] == 1){
-                            echo "<a href="."'" . base_url('deshacer/'.$noticia['ID']) ."'" . "class='button warning'>Deshacer ultimo cambio</a>
+                echo "<a href=" . "'" . base_url('editarnoticia/' . $noticia['ID']) . "'" . "class='button success'>Editar</a>
+                          ";
+                if ($noticia['retroceder'] == 1) {
+                  echo "<a href=" . "'" . base_url('deshacer/' . $noticia['ID']) . "'" . "class='button warning'>Deshacer ultimo cambio</a>
                             ";
-                          }
-                      echo "<a href='#' class='button alert'>Descartar</a> 
+                }
+                echo "<a href=" . "'" . base_url('descartar/' . $noticia['ID']) . "'" . "class='button alert'>Descartar</a> 
                           <a href='#' class='button secondary'>Historial</a> 
                       </td>";
-                    }
-                      
-                    ?>
-                    
-                </tbody>
-            </table>
+              }
+
+              ?>
+
+            </tbody>
+          </table>
         </div>
         <div class="tabs-panel" id="panel3v">
-          <p>Three</p>
-          <p>Check me out! I'm a super cool Tab panel with text content!</p>
+          <table class="hover">
+            <thead>
+              <tr>
+                <th width="250">Titulo</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              foreach ($validar as $noticia) {
+                echo "<tr>";
+                echo "<td>" . $noticia['titulo'] . "</td>";
+                echo "<td>
+                          <a href='#' class='button'>Ver Noticia</a> ";
+                if ($noticia['retroceder'] == 1) {
+                  echo "<a href=" . "'" . base_url('deshacer/' . $noticia['ID']) . "'" . "class='button warning'>Deshacer ultimo cambio</a>
+                            ";
+                }
+                echo "<a href='#' class='button secondary'>Historial</a> 
+                      </td>";
+              }
+
+              ?>
+
+            </tbody>
+          </table>
         </div>
         <div class="tabs-panel" id="panel4v">
-          <p>Four</p>
-          <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg">
+          <table class="hover">
+            <thead>
+              <tr>
+                <th width="250">Titulo</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              foreach ($descartadas as $noticia) {
+                echo "<tr>";
+                echo "<td>" . $noticia['titulo'] . "</td>";
+                echo "<td>
+                          <a href='#' class='button'>Ver Noticia</a> ";
+                if ($noticia['retroceder'] == 1) {
+                  echo "<a href=" . "'" . base_url('deshacer/' . $noticia['ID']) . "'" . "class='button warning'>Deshacer ultimo cambio</a>
+                            ";
+                }
+                echo "<a href='#' class='button secondary'>Historial</a> 
+                      </td>";
+              }
+
+              ?>
+
+            </tbody>
+          </table>
         </div>
         <div class="tabs-panel" id="panel5v">
           <p>Five</p>
@@ -97,4 +147,4 @@
 
 
 
-<?php echo $this->endSection();?>
+<?php echo $this->endSection(); ?>

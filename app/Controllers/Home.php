@@ -10,8 +10,8 @@ class Home extends BaseController
             return view('anonimo/homeView');
         }elseif($this->session->rol == 1){
             return view('editor/homeView');
-        }else{
-            return view('anonimo/homeView');
+        }elseif($this->session->rol == 2){
+            return view('validador/homeView');
         }
     }
 }

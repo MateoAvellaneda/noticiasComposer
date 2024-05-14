@@ -27,7 +27,8 @@
                 'validar' => [],
                 'descartadas' => [],
                 'rechazadas' => [],
-                'finalizadas' => []
+                'finalizadas' => [],
+                'publicadas' => []
             ];
 
             $noticias['borrador'] = $this->getBorradores();
@@ -35,6 +36,7 @@
             $noticias['descartadas'] = $this->getDescartadas();
             $noticias['rechazadas'] = $this->getRechazadas();
             $noticias['finalizadas'] = $this->getFinalizadas();
+            $noticias['publicadas'] = $this->getPublicadas();
 
             return view('editor/misNoticiasView', $noticias);
         }
@@ -87,6 +89,16 @@
             $builder->select('*');
             $builder->where('IDusuario', $idUsuario);
             $builder->where('estado', 'finalizada');
+            $query = $builder->get();
+            return $query->getResultArray();
+        }
+        private function getPublicadas(){
+            $idUsuario = $this->session->get('id');
+            $db = \config\Database::connect();
+            $builder = $db->table('noticias');
+            $builder->select('*');
+            $builder->where('IDusuario', $idUsuario);
+            $builder->where('estado', 'publicada');
             $query = $builder->get();
             return $query->getResultArray();
         }

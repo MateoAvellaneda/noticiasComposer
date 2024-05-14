@@ -17,3 +17,8 @@ $routes->get('/misnoticias', 'editor\MisNoticias::index');
 $routes->get('/editarnoticia/(:num)', 'editor\EditarNoticia::index/$1');
 $routes->post('/editarnoticia/editar/(:num)', 'editor\EditarNoticia::editar/$1');
 $routes->get('/deshacer/(:num)', 'editor\DeshacerCambio::deshacerCambio/$1');
+$routes->get('/descartar/(:num)', 'editor\DescartarNoticia::descartar/$1');
+$routes->get('/enviarValidar/(:num)', 'editor\EnviarValidar::enviarValidar/$1');
+$routes->get('/noticiasValidar', 'validador\NoticiasParaValidar::noticiasParaValidar');
+$routes->get('/publicar/(:num)', 'validador\PublicarNoticia::publicarNoticia/$1');
+$routes->get('/misValidaciones', 'validador\MisValidaciones::misValidaciones');

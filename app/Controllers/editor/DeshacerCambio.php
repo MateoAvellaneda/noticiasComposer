@@ -24,7 +24,7 @@ class DeshacerCambio extends BaseController{
             $ultimoHistorial = $this->getUltimosHistorial($idNoticia);
             if($this->checkDeshacer($ultimoHistorial)){
                 $this->deshacerUltimoHistorial($idNoticia, $ultimoHistorial[0]['numCambio']);
-                $this->deshabilitarRetroceder($idNoticia);
+                $this->updateNoticia($idNoticia);
                 return $this->response->redirect(site_url('/misnoticias'));
             }
         }
@@ -66,9 +66,15 @@ class DeshacerCambio extends BaseController{
         $builder->delete();
     }
 
-    private function deshabilitarRetroceder($idNoticia){
-        $data = ['retroceder' => 0];
-        $this->noticiasModel->update($idNoticia, $data);
+    private function updateNoticia($idNoticia){
+        $data = $this->getUltimosHistorial($idNoticia);
+        $data[0]['ID'] = $data[0]['IDnoticia'];
+        $data[0]['retroceder'] = 0;
+        unset($data[0]['IDnoticia']);
+        unset($data[0]['numCambio']);
+        unset($data[0]['fechaCambio']);
+        unset($data[0]['IDuser']);
+        $this->noticiasModel->update($idNoticia, $data[0]);
     }
 }
 ?>
