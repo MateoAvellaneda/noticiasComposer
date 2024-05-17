@@ -32,7 +32,8 @@
                 'rechazadas' => [],
                 'finalizadas' => [],
                 'publicadas' => [],
-                'correccion' => []
+                'correccion' => [],
+                'despublicadas' => []
             ];
             if($error == 'errorBorrador'){
                 $noticias['error'] = 'Se supera la cantidad máxima de noticias activas en borrador (máximo 3)';
@@ -47,6 +48,7 @@
             $noticias['publicadas'] = $this->getPublicadas();
             $noticias['rechazadas'] = $this->checkPosiblecorreccion($noticias['rechazadas']);
             $noticias['correccion'] = $this->getCorreccion();
+            $noticias['despublicadas'] = $this->getDespublicadas();
             if($this->session->get('rol') == 1){
                 return view('editor/misNoticiasView', $noticias);
             }else{
@@ -115,6 +117,17 @@
             $builder->select('*');
             $builder->where('IDusuario', $idUsuario);
             $builder->where('estado', 'publicada');
+            $query = $builder->get();
+            return $query->getResultArray();
+        }
+
+        private function getDespublicadas(){
+            $idUsuario = $this->session->get('id');
+            $db = \config\Database::connect();
+            $builder = $db->table('noticias');
+            $builder->select('*');
+            $builder->where('IDusuario', $idUsuario);
+            $builder->where('estado', 'despublicada');
             $query = $builder->get();
             return $query->getResultArray();
         }

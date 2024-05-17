@@ -31,7 +31,7 @@ class MisValidaciones extends BaseController
     {
         $this->checkSession();
         $data = ['noticias' => ''];
-        $data['noticias'] = $this->getMisValidadaciones();
+        $data['noticias'] = $this->getMisValidadacionesRecientes();
         if($this->session->get('rol') == 2){
             return view('validador/misValidacionesView', $data);
         }else{
@@ -40,7 +40,7 @@ class MisValidaciones extends BaseController
 
     }
 
-    private function getMisValidadaciones()
+    private function getMisValidadacionesRecientes()
     {
         $idUsuario = $this->session->get('id');
         $db = \config\Database::connect();
@@ -48,11 +48,12 @@ class MisValidaciones extends BaseController
         $builder->select('noticias.ID, noticias.titulo, noticias.estado,noticias.retroceder ,usuarios.fullname');
         $builder->join('usuarios', 'noticias.IDusuario = usuarios.ID');
         $builder->join('historial', 'noticias.ID = historial.IDnoticia');
-        $estados = ['publicada', 'rechazada'];
+        $estados = ['publicada', 'rechazada', 'despublicada'];
         $builder->whereIn('noticias.estado',$estados);
         $builder->where('historial.IDuser', $idUsuario);
         $builder->where('numCambio = (SELECT MAX(numCambio) FROM historial WHERE IDnoticia = noticias.ID)', NULL, FALSE);
         $query = $builder->get();
         return $query->getResultArray();
     }
+
 }

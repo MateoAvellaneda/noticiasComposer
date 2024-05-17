@@ -27,6 +27,7 @@ class NoticiasParaValidar extends BaseController{
         $this->checkSession();
         $data = ['noticias' => ''];
         $data['noticias'] = $this->getValidar();
+        $data['sistema'] = $this->validacionesDelSistema();
         if($this->session->get('rol') == 2){
             return view('validador/noticiasParaValidarView', $data);
         }else{
@@ -46,6 +47,19 @@ class NoticiasParaValidar extends BaseController{
         return $query->getResultArray();
     }
 
+
+    private function validacionesDelSistema(){
+        $idUsuario = $this->session->get('id');
+        $db = \config\Database::connect();
+        $builder = $db->table('noticias');
+        $builder->select('noticias.ID, noticias.titulo');
+        $builder->join('historial', 'noticias.ID = historial.IDnoticia');
+        $builder->where('noticias.estado', 'publicada');
+        $builder->where('historial.IDuser', 6);
+        $builder->where('numCambio = (SELECT MAX(numCambio) FROM historial WHERE IDnoticia = noticias.ID)', NULL, FALSE);
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
 
 }
 ?>

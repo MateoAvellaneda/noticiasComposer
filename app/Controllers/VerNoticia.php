@@ -38,13 +38,13 @@ class VerNoticia extends BaseController{
                 return view('editor/verNoticiaView', $noticia);
             }
         }elseif($this->session->rol == 2){
-            if($noticia['estado'] != 'publicada'){
+            if($noticia['estado'] != 'publicada' && $noticia['estado'] != 'validar'){
                 return $this->response->redirect(site_url());
             }else{
                 return view('validador/verNoticiaView', $noticia);
             }
         }elseif($this->session->rol == 3){
-            if($noticia['estado'] != 'publicada'){
+            if($noticia['estado'] != 'publicada' && $noticia['estado'] != 'validar'){
                 if($noticia['IDusuario'] != $this->session->id){
                     return $this->response->redirect(site_url());
                 }else{

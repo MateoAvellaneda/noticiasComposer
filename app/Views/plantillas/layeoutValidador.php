@@ -30,7 +30,7 @@
         <li style="margin-top: 20px;">
             <a href="<?php echo base_url('noticiasValidar')?>">Noticias para validar</a>
         </li>
-        <li style="margin-top: 20px;"><a href="<?php echo base_url('misValidaciones')?>">Mis Validaciones</a></li>
+        <li style="margin-top: 20px;"><a href="<?php echo base_url('misValidaciones')?>">Mis validaciones recientes</a></li>
         </ul>
     </div>
     <div class="top-bar-right">

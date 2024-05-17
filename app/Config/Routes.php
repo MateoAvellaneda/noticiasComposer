@@ -23,6 +23,7 @@ $routes->get('/enviarValidar/(:num)', 'editor\EnviarValidar::enviarValidar/$1');
 $routes->get('/enviarCorreccion/(:num)', 'editor\EnviarCorreccion::enviarCorreccion/$1');
 $routes->get('/noticiasValidar', 'validador\NoticiasParaValidar::noticiasParaValidar');
 $routes->get('/publicar/(:num)', 'validador\PublicarNoticia::publicarNoticia/$1');
+$routes->get('/despublicar/(:num)', 'validador\DespublicarNoticia::despublicarNoticia/$1');
 $routes->post('/rechazar', 'validador\RechazarNoticia::rechazarNoticia');
 $routes->get('/misValidaciones', 'validador\MisValidaciones::misValidaciones');
 $routes->get('/listarNoticias/(:num)', 'ListarNoticias::vistaNoticias/$1');
