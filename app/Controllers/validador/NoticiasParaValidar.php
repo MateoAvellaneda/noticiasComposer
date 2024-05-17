@@ -55,7 +55,7 @@ class NoticiasParaValidar extends BaseController{
         $builder->select('noticias.ID, noticias.titulo');
         $builder->join('historial', 'noticias.ID = historial.IDnoticia');
         $builder->where('noticias.estado', 'publicada');
-        $builder->where('historial.IDuser', 6);
+        $builder->where('historial.IDuser', 1);
         $builder->where('numCambio = (SELECT MAX(numCambio) FROM historial WHERE IDnoticia = noticias.ID)', NULL, FALSE);
         $query = $builder->get();
         return $query->getResultArray();
