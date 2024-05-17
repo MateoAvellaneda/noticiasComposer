@@ -1,0 +1,14 @@
+INFO - 2024-04-26 05:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-26 18:29:11 --> Error: Call to undefined function set_value()
+[Method: GET, Route: crearnoticia]
+in APPPATH\Views\editor\CrearNoticia.php on line 16.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/editor/CrearNoticia', [], true)
+ 4 APPPATH\Controllers\editor\CrearNoticia.php(9): view('/editor/CrearNoticia')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,622 @@
+INFO - 2024-05-08 14:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-08 14:42:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\editor\CrearNoticia::$NoticiasModel is deprecated in APPPATH\Controllers\editor\CrearNoticia.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\editor\CrearNoticia->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 14:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-08 14:45:01 --> ParseError: syntax error, unexpected double-quoted string "holavarria"
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 25.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\noticiasComposer\\vendor\\composer/../../app\\Controllers\\editor\\CrearNoticia.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\editor\\CrearNoticia')
+ 3 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\editor\\CrearNoticia', true)
+ 4 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 14:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-08 14:51:16 --> mysqli_sql_exception: Column 'IDusuario' cannot be null in C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `no...', 0)
+#1 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...', Array, false)
+#4 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\noticiasComposer\app\Models\NoticiasModel.php(25): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(111): App\Models\NoticiasModel->createNoticia(Array)
+#9 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(24): App\Controllers\editor\CrearNoticia->crearNoticia(Array, '')
+#10 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+#11 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+#12 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\noticiasComposer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2024-05-08 14:51:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'IDusuario' cannot be null
+[Method: POST, Route: crearnoticia/guardar]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (:IDusuario:, :titulo:, :descripcion:, :IDcategoria:, :estado:, :activo:, :fecha:, :fechaFin:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Models\NoticiasModel.php(25): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\editor\CrearNoticia.php(111): App\Models\NoticiasModel->createNoticia([...])
+ 7 APPPATH\Controllers\editor\CrearNoticia.php(24): App\Controllers\editor\CrearNoticia->crearNoticia([...], '')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 14:51:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'IDusuario' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (NULL, \'dfsdfsdf\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:51:16\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (NULL, \'dfsdfsdf\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:51:16\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (:IDusuario:, :titulo:, :descripcion:, :IDcategoria:, :estado:, :activo:, :fecha:, :fechaFin:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Models\NoticiasModel.php(25): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\editor\CrearNoticia.php(111): App\Models\NoticiasModel->createNoticia([...])
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(24): App\Controllers\editor\CrearNoticia->crearNoticia([...], '')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 14:51:16 --> [Caused by] mysqli_sql_exception: Column 'IDusuario' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (NULL, \'dfsdfsdf\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:51:16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (NULL, \'dfsdfsdf\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:51:16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (NULL, \'dfsdfsdf\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:51:16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (:IDusuario:, :titulo:, :descripcion:, :IDcategoria:, :estado:, :activo:, :fecha:, :fechaFin:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Models\NoticiasModel.php(25): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(111): App\Models\NoticiasModel->createNoticia([...])
+10 APPPATH\Controllers\editor\CrearNoticia.php(24): App\Controllers\editor\CrearNoticia->crearNoticia([...], '')
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 14:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-08 14:52:53 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`noticias`, CONSTRAINT `noticias_ibfk_2` FOREIGN KEY (`IDcategoria`) REFERENCES `categorias` (`ID`)) in C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `no...', 0)
+#1 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...', Array, false)
+#4 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\noticiasComposer\app\Models\NoticiasModel.php(25): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(111): App\Models\NoticiasModel->createNoticia(Array)
+#9 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(24): App\Controllers\editor\CrearNoticia->crearNoticia(Array, '')
+#10 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+#11 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+#12 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\noticiasComposer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2024-05-08 14:52:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`noticias`, CONSTRAINT `noticias_ibfk_2` FOREIGN KEY (`IDcategoria`) REFERENCES `categorias` (`ID`))
+[Method: POST, Route: crearnoticia/guardar]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (:IDusuario:, :titulo:, :descripcion:, :IDcategoria:, :estado:, :activo:, :fecha:, :fechaFin:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Models\NoticiasModel.php(25): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\editor\CrearNoticia.php(111): App\Models\NoticiasModel->createNoticia([...])
+ 7 APPPATH\Controllers\editor\CrearNoticia.php(24): App\Controllers\editor\CrearNoticia->crearNoticia([...], '')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 14:52:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`noticias`, CONSTRAINT `noticias_ibfk_2` FOREIGN KEY (`IDcategoria`) REFERENCES `categorias` (`ID`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (\'1\', \'sadasdsa\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:52:53\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (\'1\', \'sadasdsa\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:52:53\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (:IDusuario:, :titulo:, :descripcion:, :IDcategoria:, :estado:, :activo:, :fecha:, :fechaFin:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Models\NoticiasModel.php(25): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\editor\CrearNoticia.php(111): App\Models\NoticiasModel->createNoticia([...])
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(24): App\Controllers\editor\CrearNoticia->crearNoticia([...], '')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 14:52:53 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`noticias`, CONSTRAINT `noticias_ibfk_2` FOREIGN KEY (`IDcategoria`) REFERENCES `categorias` (`ID`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (\'1\', \'sadasdsa\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:52:53\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (\'1\', \'sadasdsa\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:52:53\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (\'1\', \'sadasdsa\', \'\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 11:52:53\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`IDusuario`, `titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`) VALUES (:IDusuario:, :titulo:, :descripcion:, :IDcategoria:, :estado:, :activo:, :fecha:, :fechaFin:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Models\NoticiasModel.php(25): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(111): App\Models\NoticiasModel->createNoticia([...])
+10 APPPATH\Controllers\editor\CrearNoticia.php(24): App\Controllers\editor\CrearNoticia->crearNoticia([...], '')
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 14:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 14:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 15:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 15:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 15:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 15:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 15:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 15:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 15:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 15:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 15:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-08 21:43:07 --> Error: Call to a member function get() on null
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 16.
+ 1 APPPATH\Controllers\editor\CrearNoticia.php(12): App\Controllers\editor\CrearNoticia->checkSession()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\editor\CrearNoticia->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 21:45:59 --> Error: Call to a member function get() on null
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 16.
+ 1 APPPATH\Controllers\editor\CrearNoticia.php(12): App\Controllers\editor\CrearNoticia->checkSession()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\editor\CrearNoticia->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 21:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-08 21:50:24 --> Error: Call to a member function get() on null
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 16.
+ 1 APPPATH\Controllers\editor\CrearNoticia.php(12): App\Controllers\editor\CrearNoticia->checkSession()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\editor\CrearNoticia->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 21:52:31 --> Error: Call to a member function get() on null
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 16.
+ 1 APPPATH\Controllers\editor\CrearNoticia.php(12): App\Controllers\editor\CrearNoticia->checkSession()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\editor\CrearNoticia->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 21:53:05 --> ErrorException: Attempt to read property "id" on null
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 16.
+ 1 APPPATH\Controllers\editor\CrearNoticia.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\xampp\\htdocs\\noticiasComposer\\app\\Controllers\\editor\\CrearNoticia.php', 16)
+ 2 APPPATH\Controllers\editor\CrearNoticia.php(12): App\Controllers\editor\CrearNoticia->checkSession()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\editor\CrearNoticia->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 21:54:53 --> Error: Call to a member function get() on null
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 16.
+ 1 APPPATH\Controllers\editor\CrearNoticia.php(12): App\Controllers\editor\CrearNoticia->checkSession()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\editor\CrearNoticia->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 21:57:47 --> Error: Call to a member function get() on null
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 16.
+ 1 APPPATH\Controllers\editor\CrearNoticia.php(12): App\Controllers\editor\CrearNoticia->checkSession()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\editor\CrearNoticia->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 21:58:30 --> Error: Call to a member function get() on null
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 16.
+ 1 APPPATH\Controllers\editor\CrearNoticia.php(12): App\Controllers\editor\CrearNoticia->checkSession()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\editor\CrearNoticia->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 21:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 21:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 21:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-08 22:14:03 --> ArgumentCountError: Too few arguments to function CodeIgniter\HTTP\Response::redirect(), 0 passed in C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php on line 17 and at least 1 expected
+[Method: GET, Route: crearnoticia]
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 445.
+ 1 APPPATH\Controllers\editor\CrearNoticia.php(17): CodeIgniter\HTTP\Response->redirect()
+ 2 APPPATH\Controllers\editor\CrearNoticia.php(24): App\Controllers\editor\CrearNoticia->checkSession()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 22:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:25:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 22:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-08 23:03:34 --> ErrorException: Cannot declare class App\Models\NoticiasModel, because the name is already in use
+[Method: GET, Route: crearnoticia]
+in APPPATH\Models\HistorialModel.php on line 6.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-05-08 23:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-08 23:13:22 --> ParseError: syntax error, unexpected token "}", expecting ";"
+[Method: GET, Route: crearnoticia]
+in APPPATH\Controllers\editor\CrearNoticia.php on line 131.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\noticiasComposer\\vendor\\composer/../../app\\Controllers\\editor\\CrearNoticia.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\editor\\CrearNoticia')
+ 3 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\editor\\CrearNoticia', true)
+ 4 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 23:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-08 23:15:19 --> mysqli_sql_exception: Table 'portalnoticias.HistorialCambios' doesn't exist in C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\noticiasComposer\app\Models\HistorialModel.php(26): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(131): App\Models\HistorialModel->createHistorial(Array)
+#9 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial(Array)
+#10 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia(Array, '1715210119_64ba...')
+#11 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+#12 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+#13 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#16 C:\xampp\htdocs\noticiasComposer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#17 {main}
+CRITICAL - 2024-05-08 23:15:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'portalnoticias.HistorialCambios' doesn't exist
+[Method: POST, Route: crearnoticia/guardar]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (:titulo:, :descripcion:, :IDcategoria:, :estado:, :urlImagen:, :activo:, :fecha:, :fechaFin:, :IDuser:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Models\HistorialModel.php(26): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\editor\CrearNoticia.php(131): App\Models\HistorialModel->createHistorial([...])
+ 7 APPPATH\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial([...])
+ 8 APPPATH\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia([...], '1715210119_64ba76ca627db4b6dd88.jpg')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 23:15:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'portalnoticias.HistorialCambios' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'pruebaa\', \'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210119_64ba76ca627db4b6dd88.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:15:19\', \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'pruebaa\', \'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210119_64ba76ca627db4b6dd88.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:15:19\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (:titulo:, :descripcion:, :IDcategoria:, :estado:, :urlImagen:, :activo:, :fecha:, :fechaFin:, :IDuser:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Models\HistorialModel.php(26): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\editor\CrearNoticia.php(131): App\Models\HistorialModel->createHistorial([...])
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial([...])
+10 APPPATH\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia([...], '1715210119_64ba76ca627db4b6dd88.jpg')
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 23:15:19 --> [Caused by] mysqli_sql_exception: Table 'portalnoticias.HistorialCambios' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'pruebaa\', \'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210119_64ba76ca627db4b6dd88.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:15:19\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'pruebaa\', \'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210119_64ba76ca627db4b6dd88.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:15:19\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'pruebaa\', \'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210119_64ba76ca627db4b6dd88.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:15:19\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (:titulo:, :descripcion:, :IDcategoria:, :estado:, :urlImagen:, :activo:, :fecha:, :fechaFin:, :IDuser:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Models\HistorialModel.php(26): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(131): App\Models\HistorialModel->createHistorial([...])
+10 APPPATH\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial([...])
+11 APPPATH\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia([...], '1715210119_64ba76ca627db4b6dd88.jpg')
+12 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+13 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+14 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 23:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-08 23:20:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`historial`, CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`IDnoticia`) REFERENCES `noticias` (`ID`)) in C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\noticiasComposer\app\Models\HistorialModel.php(26): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(131): App\Models\HistorialModel->createHistorial(Array)
+#9 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial(Array)
+#10 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia(Array, '')
+#11 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+#12 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+#13 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#16 C:\xampp\htdocs\noticiasComposer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#17 {main}
+CRITICAL - 2024-05-08 23:20:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`historial`, CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`IDnoticia`) REFERENCES `noticias` (`ID`))
+[Method: POST, Route: crearnoticia/guardar]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (:titulo:, :descripcion:, :IDcategoria:, :estado:, :activo:, :fecha:, :fechaFin:, :IDuser:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Models\HistorialModel.php(26): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\editor\CrearNoticia.php(131): App\Models\HistorialModel->createHistorial([...])
+ 7 APPPATH\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial([...])
+ 8 APPPATH\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia([...], '')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 23:20:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`historial`, CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`IDnoticia`) REFERENCES `noticias` (`ID`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'preeeeeee\', \'zxczxczxczxczxcvzxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxc\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 20:20:06\', \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'preeeeeee\', \'zxczxczxczxczxcvzxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxc\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 20:20:06\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (:titulo:, :descripcion:, :IDcategoria:, :estado:, :activo:, :fecha:, :fechaFin:, :IDuser:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Models\HistorialModel.php(26): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\editor\CrearNoticia.php(131): App\Models\HistorialModel->createHistorial([...])
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial([...])
+10 APPPATH\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia([...], '')
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 23:20:06 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`historial`, CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`IDnoticia`) REFERENCES `noticias` (`ID`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'preeeeeee\', \'zxczxczxczxczxcvzxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxc\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 20:20:06\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'preeeeeee\', \'zxczxczxczxczxcvzxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxc\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 20:20:06\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'preeeeeee\', \'zxczxczxczxczxcvzxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxczxc\', \'1\', \'borrador\', 0, \'2024-05-08\', \'2024-06-08 20:20:06\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (:titulo:, :descripcion:, :IDcategoria:, :estado:, :activo:, :fecha:, :fechaFin:, :IDuser:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Models\HistorialModel.php(26): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(131): App\Models\HistorialModel->createHistorial([...])
+10 APPPATH\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial([...])
+11 APPPATH\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia([...], '')
+12 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+13 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+14 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 23:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-08 23:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-08 23:23:12 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`historial`, CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`IDnoticia`) REFERENCES `noticias` (`ID`)) in C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\noticiasComposer\app\Models\HistorialModel.php(26): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(132): App\Models\HistorialModel->createHistorial(Array)
+#9 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial(Array, 10)
+#10 C:\xampp\htdocs\noticiasComposer\app\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia(Array, '1715210592_5aef...')
+#11 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+#12 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+#13 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\noticiasComposer\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#16 C:\xampp\htdocs\noticiasComposer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#17 {main}
+CRITICAL - 2024-05-08 23:23:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`historial`, CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`IDnoticia`) REFERENCES `noticias` (`ID`))
+[Method: POST, Route: crearnoticia/guardar]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (:titulo:, :descripcion:, :IDcategoria:, :estado:, :urlImagen:, :activo:, :fecha:, :fechaFin:, :IDuser:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Models\HistorialModel.php(26): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\editor\CrearNoticia.php(132): App\Models\HistorialModel->createHistorial([...])
+ 7 APPPATH\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial([...], 10)
+ 8 APPPATH\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia([...], '1715210592_5aeff4dcdf46012e077a.jpg')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 23:23:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`historial`, CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`IDnoticia`) REFERENCES `noticias` (`ID`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'zxzxczxczxczczxc\', \'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210592_5aeff4dcdf46012e077a.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:23:12\', \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'zxzxczxczxczczxc\', \'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210592_5aeff4dcdf46012e077a.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:23:12\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (:titulo:, :descripcion:, :IDcategoria:, :estado:, :urlImagen:, :activo:, :fecha:, :fechaFin:, :IDuser:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Models\HistorialModel.php(26): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\editor\CrearNoticia.php(132): App\Models\HistorialModel->createHistorial([...])
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial([...], 10)
+10 APPPATH\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia([...], '1715210592_5aeff4dcdf46012e077a.jpg')
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-08 23:23:12 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`portalnoticias`.`historial`, CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`IDnoticia`) REFERENCES `noticias` (`ID`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'zxzxczxczxczczxc\', \'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210592_5aeff4dcdf46012e077a.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:23:12\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'zxzxczxczxczczxc\', \'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210592_5aeff4dcdf46012e077a.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:23:12\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (\'zxzxczxczxczczxc\', \'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq\', \'1\', \'borrador\', \'/uploads/imagenesNoticias/1715210592_5aeff4dcdf46012e077a.jpg\', 0, \'2024-05-08\', \'2024-06-08 20:23:12\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `historial` (`titulo`, `descripcion`, `IDcategoria`, `estado`, `urlImagen`, `activo`, `fecha`, `fechaFin`, `IDuser`) VALUES (:titulo:, :descripcion:, :IDcategoria:, :estado:, :urlImagen:, :activo:, :fecha:, :fechaFin:, :IDuser:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Models\HistorialModel.php(26): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\editor\CrearNoticia.php(132): App\Models\HistorialModel->createHistorial([...])
+10 APPPATH\Controllers\editor\CrearNoticia.php(125): App\Controllers\editor\CrearNoticia->insertHistorial([...], 10)
+11 APPPATH\Controllers\editor\CrearNoticia.php(36): App\Controllers\editor\CrearNoticia->crearNoticia([...], '1715210592_5aeff4dcdf46012e077a.jpg')
+12 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\editor\CrearNoticia->guardar()
+13 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\editor\CrearNoticia))
+14 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-08 23:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
