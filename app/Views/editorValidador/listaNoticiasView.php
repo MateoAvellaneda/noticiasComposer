@@ -13,8 +13,11 @@
                     echo "<a href='".base_url('verNoticia/'. $noticia['ID'])."'>";
                     echo "<div class='noticia'>";
                     echo "<h2>" . $noticia['titulo'] . "</h2>";
-                    echo "<div class='imgContainer' style='background-image:url(" . base_url($noticia['urlImagen']) .")'>";
-                    echo "</div>";
+                    if(!empty($noticia['urlImagen'])){
+                        echo "<div class='imgContainer' style='background-image:url(" . base_url($noticia['urlImagen']) .")'>";
+                        echo "</div>";
+                    }
+
                     echo "</div>";
                 }
             ?>

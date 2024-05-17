@@ -6,6 +6,11 @@
 <div class="grid-x formContainer">
     <div class="cell small-1 containerLateral"></div>
     <div class="cell small-10 containerCentral">
+    <p class="fechaNoticia">
+            <?php
+                echo $fecha;
+            ?>
+        </p>
         <p class="categoriaNoticia">
             <?php
                 echo $categoria;
