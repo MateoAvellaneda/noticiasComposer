@@ -75,15 +75,15 @@ class Registrarse extends BaseController
             $formInput = $this->request->getPost();
             $data = [
                 'nickname' => $formInput['nickname'],
-                'passw' => $formInput['pass'],
+                'passw' => password_hash($formInput['pass'],PASSWORD_DEFAULT),
                 'email' => $formInput['email'],
                 'fullname' => ($formInput['nombre'] . ' ' . $formInput['apellido']),
                 'rol' => $formInput['rol']
             ];
             if($usuariosModel->createUser($data)){
-                echo '<h1>Exitooooo</h1>';
+                return view('anonimo/registroExitoso');
             }else{
-                echo '<h1>Muy maaaaal</h1>';
+                return $this->response->redirect(site_url());
             }
         }
     }

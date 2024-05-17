@@ -30,7 +30,7 @@ class EnviarValidar extends BaseController
         $noticia = $this->noticiasModel->find($idNoticia);
         if(empty($noticia)){
             return $this->response->redirect(site_url('/misnoticias'));
-        }elseif($noticia['estado'] != 'borrador'){
+        }elseif($noticia['estado'] != 'borrador' && $noticia['estado'] != 'correccion'){
             return $this->response->redirect(site_url('/misnoticias'));
         }else{
             $this->editDatabase($idNoticia);

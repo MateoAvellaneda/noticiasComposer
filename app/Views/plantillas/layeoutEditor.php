@@ -4,30 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias</title>
-    <link rel="stylesheet" href="<?php
+    <link rel="stylesheet" href="<?php echo base_url('assets/foundation/foundation.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css')?>">
+    <style>
+        @font-face {
+        font-family: FrankRuh;
+        src: url("<?php echo base_url('assets/font/FrankRuhlLibre-VariableFont_wght.ttf')?>");
+        }
 
-use App\Controllers\editor\CrearNoticia;
-
- echo base_url('assets/foundation/foundation.css');?>">
+        *, h1, h2, h3{
+            font-family: FrankRuh;
+        }
+    </style>
     <?php 
         echo $this->renderSection("linkCss");
     ?>
+
 </head>
 <body>
     <div class="top-bar">
     <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">Site Title</li>
-        <li>
+        <li class="menu-text logo"><img src="<?php echo base_url('logo.png')?>" alt="logotipo" class="logoImg" style="width: 80px; "></li>
+        <li style="margin-top: 20px;"><a href="<?php echo base_url()?>">Inicio</a></li>
+        <li style="margin-top: 20px;"><a href="<?php echo base_url('listarNoticias/1')?>">Últimas Noticias</a></li>
+        <li style="margin-top: 20px;">
             <a href="<?php echo base_url('crearnoticia')?>">Crear Noticia</a>
         </li>
-        <li><a href="<?php echo base_url('misnoticias')?>">Mis Noticias</a></li>
-        <li><a href="#">Three</a></li>
+        <li style="margin-top: 20px;"><a href="<?php echo base_url('misnoticias')?>">Mis Noticias</a></li>
         </ul>
     </div>
     <div class="top-bar-right">
         <ul class="menu">
-        <li><a class="button alert" href="http://localhost/noticiasComposer/public/cerrarsesion">Cerrar sesion</a></li>
+        <li><a class="button alert" href="http://localhost/noticiasComposer/public/cerrarsesion">Cerrar sesión</a></li>
         </ul>
     </div>
     </div>

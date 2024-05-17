@@ -32,7 +32,12 @@ class MisValidaciones extends BaseController
         $this->checkSession();
         $data = ['noticias' => ''];
         $data['noticias'] = $this->getMisValidadaciones();
-        return view('validador/misValidacionesView', $data);
+        if($this->session->get('rol') == 2){
+            return view('validador/misValidacionesView', $data);
+        }else{
+            return view('editorValidador/misValidacionesView', $data);
+        }
+
     }
 
     private function getMisValidadaciones()

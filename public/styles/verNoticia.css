@@ -1,0 +1,44 @@
+
+.containerCentral{
+    margin-top: 35px;
+}
+
+.containerLateral{
+    background-color: #b8c9ff;
+    min-height: 100vh;
+}
+
+.imagenContainer{
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 300px;
+    width: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+
+}
+
+.categoriaNoticia{
+    float: right;
+    width: fit-content;
+    padding: 10px;
+    background-color: rgb(230, 230, 230);
+    border: 3px ridge lightblue;
+    border-radius:  5px;
+    color: black;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.tituloNoticia{
+    margin-left: 55px;
+}
+
+.descripcionNoticia{
+    display: block;
+    width: 85%;
+    margin: 30px auto;
+    overflow-wrap: break-word;
+    white-space: pre-wrap; 
+}

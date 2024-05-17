@@ -6,7 +6,7 @@
     <div class="formContainer grid-x">
         <div class="cell small-2"></div>
         <div class="cell small-8 celdaFormulario">
-            <h1>Iniciar Sesion</h1>
+            <h1>Iniciar Sesión</h1>
             <form action="<?php echo base_url('/iniciarsesion/iniciarsesion')?>" method="post">
                 <div class="grid-x grid-padding-x">
                     <div class="small-3 cell">
@@ -48,7 +48,7 @@
             <div class="grid-x">
                 <div class="cell small-3"></div>
                 <div class="cell small-6" style="text-align: center;">
-                    <a href="<?php echo base_url('/registrarse')?>" >No tienes una cuenta? Registrate aqui!</a>
+                    <a href="<?php echo base_url('/registrarse')?>" >No tienes una cuenta? Registrate aquí!</a>
                 </div>
                 <div class="cell small-3"></div>
             </div>

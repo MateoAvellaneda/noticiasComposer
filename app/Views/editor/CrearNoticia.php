@@ -10,7 +10,7 @@
     <form action="<?php echo base_url('/crearnoticia/guardar')?>" method="post" enctype="multipart/form-data">
       <div class="grid-x grid-padding-x">
         <div class="small-7 medium-5 cell">
-          <label for="titulo" class="">Titulo de noticia:
+          <label for="titulo" class="">Título de la noticia:
             <input type="text" id="titulo" name="titulo" value="<?php echo set_value("titulo"); ?>">
           </label>
         </div>
@@ -20,7 +20,7 @@
       </div>
       <div class="grid-x grid-padding-x">
         <div class="small-7 medium-4 cell">
-          <label for="imagen" class="">Imagen de noticia (opcional):
+          <label for="imagen" class="">Imagen de la noticia (opcional):
             <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg, image/jpg">
           </label>
         </div>
@@ -30,7 +30,7 @@
       </div>
       <div class="grid-x grid-padding-x">
         <div class="small-7 medium-6 cell">
-          <label for="descripcion" class="">Descripcion de noticia:
+          <label for="descripcion" class="">Descripción de la noticia:
             <textarea name="descripcion" id="descripcion" cols="30" rows="10"><?php echo set_value("descripcion"); ?></textarea>
           </label>
         </div>
@@ -40,30 +40,25 @@
       </div>
       <div class="grid-x grid-padding-x">
         <div class="small-7 medium-5 cell">
-            <label for="categoria" class="">Categoria:</label>
+            <label for="categoria" class="">Categoría:</label>
             <select name="categoria">
-                <option value=1>Editor</option>
-                <option value=2>Validador</option>
-                <option value=3>Editor/Validador</option>
+                <?php
+                    foreach ($categorias as $categoria) {
+                            echo "<option value=".$categoria['ID'].">".$categoria['nombre'] . "</option>";
+                        
+                    }
+                ?>
             </select>
         </div>
         <div class="small-5 cell">
           <p class="error"><?php echo validation_show_error('categoria');?></p>
         </div>
       </div>
-      <div class="grid-x grid-padding-x">
-        <div class="small-2 cell">
-            <label for="activado" class="">Activar noticia:</label>
-            <input type="checkbox" class="switch-input" name="activado" id="Si-No" value=1>
-            <label for="Si-No" class="switch-paddle">
-              <span class="switch-active" aria-hidden="true">Si</span>
-              <span class="switch-inactive" aria-hidden="true">No</span>
-            </label>
-        </div>
-        <div class="small-10 cell">
-          <p class="error">asdasdsadsa</p>
-        </div>
-      </div>
+      <?php
+        if(isset($error)){
+          echo "<p class='error'>. $error .</p>";
+        }
+      ?>
       <div class="grid-x grid-padding-x">
         <div class="small-4 cell"></div>
         <div class="small-4 cell">

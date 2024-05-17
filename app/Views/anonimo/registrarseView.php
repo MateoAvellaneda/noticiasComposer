@@ -49,7 +49,7 @@
         </div>
         <div class="grid-x grid-padding-x">
             <div class="small-3 cell">
-                <label for="email" class="text-right">Correo Electronico:</label>
+                <label for="email" class="text-right">Correo Electrónico:</label>
             </div>
             <div class="small-6 cell">
                 <input type="email" id="email" name="email" value="<?php echo set_value("email"); ?>">

@@ -12,6 +12,8 @@ class Home extends BaseController
             return view('editor/homeView');
         }elseif($this->session->rol == 2){
             return view('validador/homeView');
+        }elseif($this->session->rol == 3){
+            return view('editorValidador/homeView');
         }
     }
 }

@@ -25,7 +25,7 @@
                         echo "<td>" . $noticia['estado'] . "</td>";
                         echo "<td>";
                         echo " <a href='#' class='button'>Ver Noticia</a> ";
-                        echo "<a href=" . "'" . base_url('/' . $noticia['ID']) . "'" . "class='button warning'>Deshacer ultimo cambio</a> ";
+                        echo "<a href=" . "'" . base_url('deshacer/' . $noticia['ID']) . "'" . "class='button warning'>Deshacer ultimo cambio</a> ";
                         echo "</tr>";
                     }
                 ?>

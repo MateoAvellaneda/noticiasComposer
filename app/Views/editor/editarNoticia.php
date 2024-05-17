@@ -23,7 +23,12 @@
       <div class="grid-x grid-padding-x">
         <div class="small-7 medium-4 cell">
           <label for="imagen" class="">Imagen de noticia (opcional):
-            <img src="<?php echo base_url($valuesNoticia['urlImagen']);?>" alt="">
+            <?php
+                if(!empty($valuesNoticia['urlImagen'])){
+                  echo "<img src=".base_url($valuesNoticia['urlImagen']). " alt=''>";
+                }
+              ?>
+            
             <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg, image/jpg">
           </label>
         </div>

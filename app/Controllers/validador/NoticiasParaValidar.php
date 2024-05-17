@@ -27,7 +27,12 @@ class NoticiasParaValidar extends BaseController{
         $this->checkSession();
         $data = ['noticias' => ''];
         $data['noticias'] = $this->getValidar();
-        return view('validador/noticiasParaValidarView', $data);
+        if($this->session->get('rol') == 2){
+            return view('validador/noticiasParaValidarView', $data);
+        }else{
+            return view('editorValidador/noticiasParaValidarView', $data);
+        }
+
     }
 
     private function getValidar(){

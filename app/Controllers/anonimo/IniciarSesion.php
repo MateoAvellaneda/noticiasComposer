@@ -46,10 +46,14 @@ class IniciarSesion extends BaseController
         if(empty($respuesta)){
             return view('anonimo/iniciarSesionView', ['error' => 'nombre de usuario o contrasenia incorrecta.']);
         }else{
-            print_r($respuesta);
-             $this->session->set('id', $respuesta['ID']);
-             $this->session->set('rol', $respuesta['rol']);
-             return redirect()->to(base_url());
+             if(password_verify($data['pass'],$respuesta['passw'])){
+                $this->session->set('id', $respuesta['ID']);
+                $this->session->set('rol', $respuesta['rol']);
+                return redirect()->to(base_url());
+             }else{
+                return view('anonimo/iniciarSesionView', ['error' => 'nombre de usuario o contrasenia incorrecta.']);
+             }
+
         }
     }
 
