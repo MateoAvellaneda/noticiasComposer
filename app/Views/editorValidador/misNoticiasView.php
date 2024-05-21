@@ -35,7 +35,7 @@
             </thead>
             <tbody>
               <?php
-              $stringNoticias = ['borrador', 'validar', 'descartadas', 'rechazadas', 'finalizadas'];
+              $stringNoticias = ['borrador', 'validar', 'descartadas', 'rechazadas', 'finalizadas', 'publicadas'];
               foreach ($stringNoticias as $value) {
                 foreach ($$value as $noticia) {
                   echo "<tr>";
@@ -43,7 +43,7 @@
                   echo "<td>" . $noticia['estado'] . "</td>";
                   echo "<td> 
                         <a href=" . "'" . base_url('verNoticia/' . $noticia['ID']) . "'" . "class='button'>Ver Noticia</a> 
-                        <a href=".base_url('VerHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> 
+                        <a href=".base_url('verHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> 
                       </td>";
                   echo "</tr>";
                 }
@@ -83,7 +83,7 @@
                     echo "<a href='".base_url('activar/' . $noticia['ID'])."' class='button'>Activar</a> ";
                   }
                 }
-                 echo "<a href=".base_url('VerHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> 
+                 echo "<a href=".base_url('verHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> 
                       </td>";
               }
 
@@ -118,7 +118,7 @@
                     echo "<a href='".base_url('activar/' . $noticia['ID'])."' class='button'>Activar</a> ";
                   }
                 }
-                echo "<a href=".base_url('VerHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> 
+                echo "<a href=".base_url('verHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> 
                       </td>";
               }
 
@@ -146,7 +146,7 @@
                   echo "<a href=" . "'" . base_url('deshacer/' . $noticia['ID']) . "'" . "class='button warning'>Deshacer ultimo cambio</a>
                             ";
                 }
-                echo "<a href=".base_url('VerHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> 
+                echo "<a href=".base_url('verHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> 
                       </td>";
               }
 
@@ -171,7 +171,7 @@
                 echo "<td>
                     <a href=" . "'" . base_url('verNoticia/' . $noticia['ID']) . "'" . "class='button'>Ver Noticia</a> ";  
                 echo "<button class='button warning' data-open='rechazoNoticia".$noticia['ID']."'>Ver Motivo</button> ";
-                echo "<a href=".base_url('VerHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> ";
+                echo "<a href=".base_url('verHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a> ";
                 if($noticia['corregir'] == 1){
                   echo "<a href=" . "'" . base_url('enviarCorreccion/' . $noticia['ID']) . "'" . "class='button'>Enviar a correccion</a>";
                 }
@@ -213,7 +213,7 @@
                 echo "<a href=" . "'" . base_url('editarnoticia/' . $noticia['ID']) . "'" . "class='button success'>Editar</a>
                           ";
                 echo "<a href=" . "'" . base_url('enviarValidar/' . $noticia['ID']) . "'" . "class='button success'>Enviar a validar</a> ";
-                echo "<a href=".base_url('VerHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a>  
+                echo "<a href=".base_url('verHistorial/' . $noticia['ID']) ." class='button secondary'>Historial</a>  
                       </td>";
               }
 

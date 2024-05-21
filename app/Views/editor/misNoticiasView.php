@@ -35,7 +35,7 @@
             </thead>
             <tbody>
               <?php
-              $stringNoticias = ['borrador', 'validar', 'descartadas', 'rechazadas', 'finalizadas'];
+              $stringNoticias = ['borrador', 'validar', 'descartadas', 'rechazadas', 'finalizadas','publicadas'];
               foreach ($stringNoticias as $value) {
                 foreach ($$value as $noticia) {
                   echo "<tr>";
